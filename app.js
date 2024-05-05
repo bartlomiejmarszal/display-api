@@ -18,7 +18,7 @@ const imagesObjects = images.map(image => {
 });
 
 app.get('/', async (req, res) => {
-  const messages = await getMessages();
+  const messages = [];
   console.log('messages: ', messages)
   const data = {
     title: 'My Page',
