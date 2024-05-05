@@ -8,4 +8,4 @@ RUN npm ci
 
 EXPOSE 3000
 RUN echo "To ja!"
-CMD [ "nodemon", "app.js" ]
+CMD [ "nodemon", "--inspect=0.0.0.0:9229", "app.js" ]
