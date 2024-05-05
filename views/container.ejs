@@ -1,0 +1,10 @@
+<!-- container.ejs -->
+<div class="container">
+    <% images.forEach(function(image, index) { %>
+        <%- include('itemImage', { image: image }) %>
+    <% }) %>
+    <% messages.forEach(function(message) { %>
+        <%- include('itemMessage', { message: message }) %>
+    <% }) %>
+  </div>
+  

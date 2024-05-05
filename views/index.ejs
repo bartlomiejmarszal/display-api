@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Grid Page</title>
+    <title><%= title %></title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <% for (let i = 0; i < 9; i++) { %>
-      <div class="item">Item <%= i + 1 %></div>
-    <% } %>
-  </div>
-</body>
+    <%- include('container', { images: images, messages: messages }) %>
+  </body>
 </html>

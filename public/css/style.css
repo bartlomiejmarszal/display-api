@@ -1,10 +1,20 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
-  }
-  
-  .item {
-    background-color: #ccc;
-    padding: 1em;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  width: 100vw; /* Set the width to 100% of the viewport width */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  overflow: auto; /* Add scrollbars if necessary */
+}
+
+.item {
+  background-color: #ccc;
+  padding: 1em;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
