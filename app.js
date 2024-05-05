@@ -12,7 +12,7 @@ app.use(express.static('public/images'));
 const images = fs.readdirSync('public/images'); 
 const imagesObjects = images.map(image => {
   return {
-    publicPath: 'images/' + image,
+    publicPath: 'images/mnt' + image,
     name: image
   };
 });
