@@ -9,10 +9,10 @@ app.use(express.static('public'));
 app.use(express.static('public/images'));
 
 //For each element in a list create image object with attributes publicPath and image name
-const images = fs.readdirSync('public/images'); 
+const images = fs.readdirSync('public/images/mnt'); 
 const imagesObjects = images.map(image => {
   return {
-    publicPath: 'images/mnt' + image,
+    publicPath: 'images/mnt/' + image,
     name: image
   };
 });
@@ -21,7 +21,7 @@ app.get('/', async (req, res) => {
   const messages = [];
   console.log('messages: ', messages)
   const data = {
-    title: 'My Page',
+    title: 'My Pages',
     images: imagesObjects.slice(0, 2),
     messages: messages
   };
@@ -32,4 +32,3 @@ app.get('/', async (req, res) => {
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
-
